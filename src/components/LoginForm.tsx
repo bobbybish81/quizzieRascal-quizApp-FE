@@ -65,6 +65,7 @@ const LoginForm = () => {
               placeholder='Enter email'
               value={formik.values.email}
               onChange={formik.handleChange}
+              autoComplete='off'
               required/>
           </div>
           <div className='mx-auto px-5 mb-4'>
@@ -76,6 +77,7 @@ const LoginForm = () => {
                 placeholder='Enter password'
                 value={formik.values.password}
                 onChange={formik.handleChange}
+                autoComplete='off'
                 required/>
                 <IconButton
                   className='py-0' 

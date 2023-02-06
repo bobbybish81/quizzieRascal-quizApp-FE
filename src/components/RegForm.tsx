@@ -57,6 +57,7 @@ const Register = () => {
                   placeholder='Add username'
                   value={formik.values.username}
                   onChange={formik.handleChange}
+                  autoComplete='off'
                   required/>
               </div>
               <div className='mx-auto px-5 mb-4'>
@@ -67,6 +68,7 @@ const Register = () => {
                   placeholder='Add email address'
                   value={formik.values.email}
                   onChange={formik.handleChange}
+                  autoComplete='off'
                   required/>
               </div>
               <div className='mx-auto px-5 mb-4'>
@@ -77,6 +79,7 @@ const Register = () => {
                   placeholder='Add password'
                   value={formik.values.email}
                   onChange={formik.handleChange}
+                  autoComplete='off'
                   required/>
               </div>
               <p className='error-message m-0'>{error}</p>
