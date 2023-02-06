@@ -16,25 +16,27 @@ const Leaderboard = ({leaderboard} : TableProps) => {
   return (
     /* mobile view */
     <>
-    <h2 className='text-white mt-3 mb-3'>LEADERBOARD</h2>
-    <table className="mobile-table text-white mx-auto">
-      <thead>
-        <tr>
-          <th style={{width: '100px'}} scope='col'>Username</th>
-          <th className='text-center' style={{width: '100px'}} scope='col'>Played</th>
-          <th className='text-center' style={{width: '100px'}} scope='col'>Average Score</th>
-        </tr>
-      </thead>
-      <tbody>
-      {leaderboard.userData.map((user, index) => (
-        <tr key={index}>
-          <th scope='row'>{user.username}</th>
-          <td className='text-center'>{user.totalPlays}</td>
-          <td className='text-center'>{user.averageScore}</td>
-        </tr>
-      ))}
-      </tbody>
-    </table>
+    <article className='mobile-table d-flex justify-content-center w-100'>
+      <h2 className='text-white mt-3 mb-3 mx-auto'>LEADERBOARD</h2>
+      <table className="text-white mx-auto w-100">
+        <thead>
+          <tr>
+            <th style={{width: '40%'}} scope='col'>Username</th>
+            <th className='text-center' style={{width: '30%'}} scope='col'>Played</th>
+            <th className='text-center' style={{width: '30%'}} scope='col'>Average Score</th>
+          </tr>
+        </thead>
+        <tbody>
+        {leaderboard.userData.map((user, index) => (
+          <tr key={index}>
+            <th scope='row'>{user.username}</th>
+            <td className='text-center'>{user.totalPlays}</td>
+            <td className='text-center'>{user.averageScore}</td>
+          </tr>
+        ))}
+        </tbody>
+      </table>
+    </article>
 
     {/* desktop view */}
     <article
