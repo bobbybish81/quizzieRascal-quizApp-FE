@@ -65,7 +65,6 @@ const LoginForm = () => {
               placeholder='Enter email'
               value={formik.values.email}
               onChange={formik.handleChange}
-              autoComplete='off'
               required/>
           </div>
           <div className='mx-auto px-5 mb-4'>
