@@ -1,4 +1,5 @@
 import { ILeaderboard } from '../interfaces/ILeaderboard';
+import '../styles/Quiz.css';
 
 interface TableProps {
   leaderboard: ILeaderboard,
@@ -16,7 +17,29 @@ const Leaderboard = ({leaderboard} : TableProps) => {
     <article
       className='text-white mx-auto d-flex flex-column align-items-center'>
       <h2 className='mt-3 mb-3'>LEADERBOARD</h2>
-      <table className="table text-white">
+
+      {/* mobile view */}
+      <table className="mobile-table text-white">
+        <thead>
+          <tr>
+            <th scope='col'>Username</th>
+            <th className='text-center' scope='col'>Played</th>
+            <th className='text-center' scope='col'>Average Score</th>
+          </tr>
+        </thead>
+        <tbody>
+        {leaderboard.userData.map((user, index) => (
+          <tr key={index}>
+            <th scope='row'>{user.username}</th>
+            <td className='text-center'>{user.totalPlays}</td>
+            <td className='text-center'>{user.averageScore}</td>
+          </tr>
+        ))}
+        </tbody>
+      </table>
+      
+      {/* desktop view */}
+      <table className="desktop-table text-white">
         <thead>
           <tr>
             <th scope='col'>Username</th>

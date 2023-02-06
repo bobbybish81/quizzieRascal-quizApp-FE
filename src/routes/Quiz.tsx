@@ -3,6 +3,7 @@ import IState from '../interfaces/IState';
 import { useNavigate } from 'react-router-dom';
 import Question from '../components/Question';
 import axios from 'axios';
+import '../styles/Quiz.css';
 
 
 const Quiz = () => {
