@@ -25,6 +25,10 @@ input, .password-div  {
   border-radius: 5px;
 }
 
+.password-div button {
+  margin-right: 0.75rem;
+}
+
 input:focus {
   outline: none;
 }
