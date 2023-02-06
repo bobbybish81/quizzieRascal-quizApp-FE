@@ -16,13 +16,13 @@ const Leaderboard = ({leaderboard} : TableProps) => {
   return (
     /* mobile view */
     <>
-    <h2 className='mt-3 mb-3'>LEADERBOARD</h2>
-    <table className="mobile-table text-white w-100">
+    <h2 className='text-white mt-3 mb-3'>LEADERBOARD</h2>
+    <table className="mobile-table text-white mx-auto">
       <thead>
         <tr>
-          <th scope='col'>Username</th>
-          <th className='text-center' scope='col'>Played</th>
-          <th className='text-center' scope='col'>Average Score</th>
+          <th style={{width: '100px'}} scope='col'>Username</th>
+          <th className='text-center' style={{width: '100px'}} scope='col'>Played</th>
+          <th className='text-center' style={{width: '100px'}} scope='col'>Average Score</th>
         </tr>
       </thead>
       <tbody>
@@ -38,9 +38,9 @@ const Leaderboard = ({leaderboard} : TableProps) => {
 
     {/* desktop view */}
     <article
-      className='text-white mx-auto d-flex flex-column align-items-center'>
+      className='desktop-table text-white mx-auto d-flex flex-column align-items-center'>
       <h2 className='mt-3 mb-3'>LEADERBOARD</h2>
-      <table className="desktop-table text-white">
+      <table className='text-white'>
         <thead>
           <tr>
             <th scope='col'>Username</th>
