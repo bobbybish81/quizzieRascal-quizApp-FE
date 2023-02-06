@@ -68,7 +68,7 @@ const LoginForm = () => {
               required/>
           </div>
           <div className='mx-auto px-5 mb-4'>
-            <div className='w-100 d-flex justify-content-between p-0 bg-white'>
+            <div className='password-div w-100 d-flex justify-content-between p-0 bg-white'>
               <input
                 className='password p-2 m-0'
                 type={showPassword ? 'text' : 'password'}

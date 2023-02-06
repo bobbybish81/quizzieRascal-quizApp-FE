@@ -20,7 +20,7 @@
   background-color: #1F5F82;
 }
 
-input {
+input, .password-div  {
   border: none;
   border-radius: 5px;
 }
