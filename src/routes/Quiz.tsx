@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import Question from '../components/Question';
 import axios from 'axios';
 
+
 const Quiz = () => {
 
   const navigate = useNavigate();
@@ -105,9 +106,7 @@ const Quiz = () => {
       )}
       {!quizData.showResults && (
         <section className='text-white'>
-          <h1
-            className='mt-5 fw-bolder text-center text-white'
-            style={{margin: '2rem auto', fontSize: '4rem'}}>QUIZZIE RASCAL</h1>
+          <h1 className='heading mt-5 fw-bolder text-center text-white'>QUIZZIE RASCAL</h1>
           <h2 className='text-center'>
             Question {quizData?.currentQuestionIndex + 1}/
             {quizData?.questions?.length}

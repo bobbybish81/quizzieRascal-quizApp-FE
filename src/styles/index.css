@@ -11,3 +11,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
 }
+
+table {
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 768px) {
+  .heading {
+    margin: 2rem auto;
+    font-size: 4rem;
+  }
+  table {
+    font-size: 1.25rem;
+  }
+}
