@@ -46,7 +46,7 @@ const Register = () => {
               <form
               onSubmit={formik.handleSubmit}
               className='reg-form'>
-              <p className='text-white mt-5'>Register with</p>
+              <p className='text-white pt-5'>Register with</p>
               <h1 className='text-white mb-5'>QUIZZIE RASCAL!</h1>
               <p className='text-white-50'>Please complete the form below</p>
               <div className='mx-auto px-5 mb-4'>
@@ -77,7 +77,7 @@ const Register = () => {
                   type='password'
                   name='password'
                   placeholder='Add password'
-                  value={formik.values.email}
+                  value={formik.values.password}
                   onChange={formik.handleChange}
                   autoComplete='off'
                   required/>
