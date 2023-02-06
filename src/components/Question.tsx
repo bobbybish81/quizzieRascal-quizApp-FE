@@ -57,7 +57,8 @@ const Question = ({ quizData, setQuizData, startTimer, timeTaken, setTimeTaken }
         timeTaken={timeTaken}
         setTimeTaken={setTimeTaken}/>
       <div className='answers mt-5'>
-        {answers.sort().map((answer: string, index: number) => (
+        {answers.length === 0 ? <h1>Loading....</h1> :
+        answers.sort().map((answer: string, index: number) => (
           <Answers
             answerText={answer}
             currentAnswer={quizData?.currentAnswer}
