@@ -22,7 +22,6 @@
   position: relative;
   display: flex;
   color: #161A41;
-  overflow: hidden;
   cursor: pointer;
 }
 
