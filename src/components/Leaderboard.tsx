@@ -41,9 +41,9 @@ const Leaderboard = ({leaderboard} : TableProps) => {
 
     {/* desktop view */}
     <article
-      className='desktop-table'>
+      className='desktop-table w-100'>
       <h2 className='mt-3 mb-3'>LEADERBOARD</h2>
-      <table className='text-white'>
+      <table className='text-white w-50'>
         <thead>
           <tr className='tablerow'>
             <th className='tablerowhead' scope='col'>Username</th>
