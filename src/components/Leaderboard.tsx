@@ -21,7 +21,7 @@ const Leaderboard = ({leaderboard} : TableProps) => {
       <h2 className='text-white mt-3 mb-3 mx-auto'>LEADERBOARD</h2>
       <table className="text-white mx-auto w-100">
         <thead>
-          <tr>
+          <tr className='tablerow'>
             <th style={{width: '40%'}} scope='col'>Username</th>
             <th className='text-center' style={{width: '30%'}} scope='col'>Played</th>
             <th className='text-center' style={{width: '30%'}} scope='col'>Average Score</th>
@@ -29,7 +29,7 @@ const Leaderboard = ({leaderboard} : TableProps) => {
         </thead>
         <tbody>
         {leaderboard.userData.map((user, index) => (
-          <tr key={index}>
+          <tr key={index} className='tablerow'>
             <th scope='row'>{user.username}</th>
             <td className='text-center'>{user.totalPlays}</td>
             <td className='text-center'>{user.averageScore}</td>
@@ -45,17 +45,17 @@ const Leaderboard = ({leaderboard} : TableProps) => {
       <h2 className='mt-3 mb-3'>LEADERBOARD</h2>
       <table className='text-white'>
         <thead>
-          <tr>
-            <th scope='col'>Username</th>
-            <th className='text-center' scope='col'>Played</th>
-            <th className='text-center' scope='col'>Average Score</th>
-            <th className='text-center' scope='col'>Average Time</th>
-            <th className='text-center' scope='col'>Quickest Time</th>
+          <tr className='tablerow'>
+            <th className='tablerowhead' scope='col'>Username</th>
+            <th className='tablehead text-center' scope='col'>Played</th>
+            <th className='tablehead text-center' scope='col'>Average Score</th>
+            <th className='tablehead text-center' scope='col'>Average Time</th>
+            <th className='tablehead text-center' scope='col'>Quickest Time</th>
           </tr>
         </thead>
         <tbody>
         {leaderboard.userData.map((user, index) => (
-          <tr key={index}>
+          <tr key={index} className='tablerow'>
             <th scope='row'>{user.username}</th>
             <td className='text-center'>{user.totalPlays}</td>
             <td className='text-center'>{user.averageScore}</td>

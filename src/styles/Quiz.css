@@ -11,6 +11,10 @@
   display: none;
 }
 
+.tablerow {
+  border-bottom: 1px solid #fff;
+}
+
 @media screen and (min-width: 768px) {
   .heading {
     margin: 2rem auto;
@@ -21,5 +25,11 @@
   }
   .desktop-table {
     display: flex;
+  }
+  .tablerowhead {
+    width: 150px;
+  }
+  .tablehead {
+    width: 100px;
   }
 }
