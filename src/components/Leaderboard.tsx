@@ -1,5 +1,5 @@
 import { ILeaderboard } from '../interfaces/ILeaderboard';
-import '../styles/Quiz.css';
+import '../styles/Home.css';
 
 interface TableProps {
   leaderboard: ILeaderboard,
@@ -19,7 +19,9 @@ const Leaderboard = ({leaderboard} : TableProps) => {
     <article
       className='mobile-table w-100'>
       <h2 className='text-white mt-3 mb-3 mx-auto'>LEADERBOARD</h2>
-      <table className="text-white mx-auto w-100">
+      <table
+        className="text-white mx-auto"
+        style={{width: '90%'}}>
         <thead>
           <tr className='tablerow'>
             <th style={{width: '40%'}} scope='col'>Username</th>

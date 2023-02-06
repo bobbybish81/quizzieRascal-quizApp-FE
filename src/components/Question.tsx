@@ -3,6 +3,7 @@ import Stopwatch from './Stopwatch';
 import Answers from './Answers';
 import IState from '../interfaces/IState';
 import IQuestions from '../interfaces/IQuestions';
+import '../styles/Answers.css'
 
 interface QuestionProps {
   quizData: IState,
@@ -51,7 +52,7 @@ const Question = ({ quizData, setQuizData, startTimer, timeTaken, setTimeTaken }
 
   return (
     <div>
-      <h3 className='text-white text-center my-3'>{currentQuestion.question}</h3>
+      <p className='question text-white text-center my-3'>{currentQuestion.question}</p>
       <Stopwatch
         startTimer={startTimer}
         timeTaken={timeTaken}

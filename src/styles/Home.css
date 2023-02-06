@@ -11,7 +11,7 @@
   background-color: #206083;
   color: #fff;
   border-radius: 0.5rem;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
 }
 
 .play-btn:hover {
@@ -34,4 +34,64 @@
 .sign-out:hover {
   color: #161A41;
   cursor: pointer;
+}
+
+.mobile-table, .desktop-table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  margin: 0 auto;
+}
+
+.heading {
+  margin: 0.5rem auto 1rem auto;
+  font-size: 2rem;
+}
+
+.greeting {
+  font-size: 1rem;
+}
+
+.desktop-table {
+  display: none;
+}
+
+table {
+  font-size: 0.9rem;
+  margin: 0 1rem;
+}
+
+.tablerow {
+  height: 40px;
+  border-bottom: 0.5px solid #e9e7e7;
+}
+
+@media screen and (min-width: 768px) {
+  .heading {
+    margin: 2rem auto;
+    font-size: 4rem;
+  }
+  .greeting {
+    font-size: 1.5rem;
+  }
+  .play-btn {
+    font-size: 1.1rem;
+  }
+  .mobile-table {
+    display: none;
+  }
+  .desktop-table {
+    display: flex;
+  }
+  table {
+    font-size: 1.2rem;
+  }
+  .tablerowhead {
+    width: 150px;
+  }
+  .tablehead {
+    width: 100px;
+  }
 }

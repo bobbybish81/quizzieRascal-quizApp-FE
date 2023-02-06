@@ -1,3 +1,8 @@
+.question {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
 .answers {
   display: flex;
   flex-direction: column;
@@ -17,6 +22,7 @@
   position: relative;
   display: flex;
   color: #161A41;
+  overflow: hidden;
   cursor: pointer;
 }
 
@@ -40,7 +46,7 @@
   align-items: center;
   margin: 0 0.5rem;
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
 }
 
 .correct-answer {
@@ -92,6 +98,9 @@
 }
 
 @media screen and (min-width: 768px) {
+  .question {
+    font-size: 2rem
+  }
   .answers {
     margin: 0 auto;
     display: flex;
