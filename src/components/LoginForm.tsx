@@ -23,7 +23,7 @@ const LoginForm = () => {
 
   const onSubmit = async (values:any) => {
     try {
-      const response = await axios.post('http://localhost:8080/login', values);
+      const response = await axios.post('https://quizzierascal.cyclic.app/login', values);
       signIn({
         token: response?.data.token,
         expiresIn: 86400,

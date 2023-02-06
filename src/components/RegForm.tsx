@@ -18,7 +18,7 @@ const Register = () => {
 
   const onSubmit = async (values:any) => {
     try {
-      const response = await axios.post('http://localhost:8080/register', values);
+      const response = await axios.post('https://quizzierascal.cyclic.app/register', values);
       setRegistration(response.data)
       setTimeout(() => navigate('/login'), 5000);
     }

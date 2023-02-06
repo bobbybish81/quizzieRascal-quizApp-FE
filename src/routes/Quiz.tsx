@@ -54,7 +54,7 @@ const Quiz = () => {
         score: quizData.score,
         timeTaken: timeTaken,
       }
-    axios.post(`http://localhost:8080/api/leaderboard/${quizData.id}`, result);
+    axios.post(`https://quizzierascal.cyclic.app/api/leaderboard/${quizData.id}`, result);
     }
   }
 

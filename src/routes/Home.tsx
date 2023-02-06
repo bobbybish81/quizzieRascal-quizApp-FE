@@ -18,7 +18,7 @@ const Home = () => {
   useEffect(() => {
     setLeaderboard({...leaderboard, loading: true})
     const fetchData = async () => {
-      axios.get('http://localhost:8080/api/leaderboard')
+      axios.get('https://quizzierascal.cyclic.app/api/leaderboard')
         .then(response => setLeaderboard({
           ...leaderboard,
           loading: false,
