@@ -22,17 +22,17 @@ const Leaderboard = ({leaderboard} : TableProps) => {
       <table className="mobile-table text-white">
         <thead>
           <tr>
-            <th scope='col'>Username</th>
-            <th className='text-center' scope='col'>Played</th>
-            <th className='text-center' scope='col'>Average Score</th>
+            <th scope='table-text col'>Username</th>
+            <th className='table-text' scope='col'>Played</th>
+            <th className='table-text' scope='col'>Average Score</th>
           </tr>
         </thead>
         <tbody>
         {leaderboard.userData.map((user, index) => (
           <tr key={index}>
-            <th scope='row'>{user.username}</th>
-            <td className='text-center'>{user.totalPlays}</td>
-            <td className='text-center'>{user.averageScore}</td>
+            <th scope='table-text row'>{user.username}</th>
+            <td className='table-text'>{user.totalPlays}</td>
+            <td className='table-text'>{user.averageScore}</td>
           </tr>
         ))}
         </tbody>
