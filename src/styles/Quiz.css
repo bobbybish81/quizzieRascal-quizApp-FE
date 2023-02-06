@@ -1,5 +1,10 @@
-.mobile-table {
-  display: block;
+.mobile-table, .desktop-table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  margin: 0 auto;
 }
 
 .desktop-table {
@@ -15,6 +20,6 @@
     display: none;
   }
   .desktop-table {
-    display: block;
+    display: flex;
   }
 }

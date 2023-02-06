@@ -16,7 +16,8 @@ const Leaderboard = ({leaderboard} : TableProps) => {
   return (
     /* mobile view */
     <>
-    <article className='mobile-table d-flex justify-content-center w-100'>
+    <article
+      className='mobile-table w-100'>
       <h2 className='text-white mt-3 mb-3 mx-auto'>LEADERBOARD</h2>
       <table className="text-white mx-auto w-100">
         <thead>
@@ -40,7 +41,7 @@ const Leaderboard = ({leaderboard} : TableProps) => {
 
     {/* desktop view */}
     <article
-      className='desktop-table text-white mx-auto d-flex flex-column align-items-center'>
+      className='desktop-table'>
       <h2 className='mt-3 mb-3'>LEADERBOARD</h2>
       <table className='text-white'>
         <thead>
