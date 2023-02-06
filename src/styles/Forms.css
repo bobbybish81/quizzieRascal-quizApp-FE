@@ -26,7 +26,7 @@ input, .password-div  {
 }
 
 .password-div button {
-  margin-right: 0.75rem;
+  margin-right: 3rem;
 }
 
 input:focus {
@@ -87,6 +87,9 @@ input:focus {
     width: 400px;
     height: 600px;
     border: 4px solid #fff;
+  }
+  .password-div button {
+    margin-right: 0.75rem;
   }
 }
 
