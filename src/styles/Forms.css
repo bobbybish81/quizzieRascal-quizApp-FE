@@ -75,7 +75,7 @@ input:focus {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 10rem;
+    padding-top: 8rem;
   }
   .login-form, .reg-form {
     border-radius: 1rem;
