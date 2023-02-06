@@ -1,0 +1,87 @@
+.form-mobile {
+  display: block;
+  height: 100vh;
+  min-width: 350px;
+  background-color: #161A41;
+  margin: 0;
+  border: 1px solid #fff;
+}
+.form-desktop {
+  display: none;
+}
+
+.login-form, .reg-form {
+  height: 100vh;
+  background-color: #161A41;
+  text-align: center;
+}
+
+.reg-form {
+  background-color: #1F5F82;
+}
+
+input {
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+.error-message {
+  height: 1.25rem;
+  color: #fff
+}
+
+.login-btn, .reg-btn {
+  margin: 1.5rem;
+  padding: 0.25rem 1rem;
+  border: 2px solid #fff;
+  background-color: #161A41;
+  font-size: 1.2rem;
+  color: #fff;
+  border-radius: 0.5rem;
+}
+
+.reg-btn {
+  background-color: #1F5F82;
+}
+
+.login-btn:hover {
+  background-color: #283078;
+}
+
+.reg-btn:hover {
+  background-color: #1C8CAB;
+}
+
+.portfolio-link {
+  color: #61b9c5;
+  margin-top: 4rem;
+  font-size: 0.75rem;
+  font-style: italic;
+}
+
+.portfolio-link a {
+  color: #61b9c5;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+  .form-mobile {
+    display: none;
+  }
+  .form-desktop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10rem;
+  }
+  .login-form, .reg-form {
+    border-radius: 1rem;
+    width: 400px;
+    height: 600px;
+    border: 4px solid #fff;
+  }
+}
+
