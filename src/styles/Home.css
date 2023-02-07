@@ -45,6 +45,10 @@
   margin: 0 auto;
 }
 
+.quiz-heading {
+  display: none;
+}
+
 .heading {
   margin: 0.5rem auto 1rem auto;
   font-size: 2rem;
@@ -69,7 +73,10 @@ table {
 }
 
 @media screen and (min-width: 768px) {
-  .heading {
+  .quiz-heading {
+    display: block;
+  }
+  .heading, .quiz-heading {
     margin: 2rem auto;
     font-size: 4rem;
   }

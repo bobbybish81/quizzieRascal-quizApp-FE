@@ -89,9 +89,7 @@ const Quiz = () => {
     <main className='container mt-5 mx-auto'>
       {quizData.showResults && (
         <section className='text-white text-center'>
-          <h1
-            className='mt-5 fw-bolder text-center text-white'
-            style={{margin: '2rem auto', fontSize: '4rem'}}>QUIZZIE RASCAL</h1>
+          <h1 className='heading mt-5 fw-bolder text-center text-white'>QUIZZIE RASCAL</h1>
           <h2 className='mt-5'>Congratulations!!</h2>
           <h3 className='mb-5'>{`You completed the quiz in ${msConverter(timeTaken)}!`}</h3>
             <h3 className='text-white text-center mb-5'>
@@ -107,7 +105,7 @@ const Quiz = () => {
       )}
       {!quizData.showResults && (
         <section className='text-white'>
-          <h1 className='heading mt-5 fw-bolder text-center text-white'>QUIZZIE RASCAL</h1>
+          <h1 className='quiz-heading mt-5 fw-bolder text-center text-white'>QUIZZIE RASCAL</h1>
           <h2 className='text-center'>
             Question {quizData?.currentQuestionIndex + 1}/
             {quizData?.questions?.length}
