@@ -28,10 +28,11 @@
 
 .log-out {
   color: #faf6f6;
+  font-weight: 600;
   text-decoration: underline;
 }
 
-.sign-out:hover {
+.log-out:hover {
   color: #161A41;
   cursor: pointer;
 }
@@ -93,7 +94,7 @@ table {
     display: flex;
   }
   table {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   .tablerowhead {
     width: 150px;
