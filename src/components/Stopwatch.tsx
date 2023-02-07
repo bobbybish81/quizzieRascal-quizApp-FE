@@ -21,7 +21,7 @@ const Stopwatch = ({ startTimer, timeTaken, setTimeTaken } : StopwatchProps) => 
   }, [setTimeTaken, startTimer]);
 
   return (
-    <div className='text-white text-center my-3'>
+    <div className='text-white text-center mt-3'>
       <span>{("0" + Math.floor((timeTaken / 60000) % 60)).slice(-2)}:</span>
       <span>{("0" + Math.floor((timeTaken / 1000) % 60)).slice(-2)}:</span>
       <span>{("0" + ((timeTaken / 10) % 100)).slice(-2)}</span>
