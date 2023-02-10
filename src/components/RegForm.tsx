@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import IconButton from '@mui/material/IconButton';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import CloseIcon from '@mui/icons-material/Close';
 import { useFormik } from 'formik';
 import axios, { AxiosError } from 'axios';
 import '../styles/Forms.css';
@@ -48,14 +49,15 @@ const Register = () => {
     onSubmit,
   });
 
-  console.log(registration)
-
   return (
     <>
       {!registration.registered ? 
           <form
             onSubmit={formik.handleSubmit}
             className='reg-form'>
+          <CloseIcon
+            className='close-icon'
+            onClick={() => navigate('/login')}/>
             <p className='text-white pt-5'>Register with</p>
             <h1 className='text-white mb-5'>QUIZZIE RASCAL!</h1>
             <p className='text-white-50'>Please complete the form below</p>
