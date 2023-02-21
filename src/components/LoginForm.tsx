@@ -55,7 +55,7 @@ const LoginForm = () => {
           onSubmit={formik.handleSubmit}
           className='login-form'>
           <p className='text-white pt-5'>Welcome to</p>
-          <h1 className='text-white mb-5'>QUIZZIE RASCAL!</h1>
+          <h2 className='text-white mb-5'>QUIZZIE RASCAL</h2>
           <p className='text-white-50'>Please enter your email and password!</p>
           <div className='mx-auto px-5 mb-4'>
             <input
@@ -96,13 +96,6 @@ const LoginForm = () => {
           <p className='text-white-50'>Don't have an account? <Link
               to='/register'
               className='text-white bolder'>Register
-            </Link>
-          </p>
-          <p className='portfolio-link'>Website developed by <Link
-            to='https://robertbishwebdeveloper.com'
-              target="_blank"
-              rel="noreferrer">
-              Robert Bish
             </Link>
           </p>
         </form>

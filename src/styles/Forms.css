@@ -21,6 +21,13 @@
   position: relative;
 }
 
+.login-form h2 , .reg-form h2 {
+  font-weight: 900;
+  letter-spacing: 0.25rem;
+  font-family: 'Abril Fatface', cursive;
+  text-shadow: 1px 1px #000;
+}
+
 .close-icon {
   position: absolute;
   top: 10px;
@@ -65,18 +72,6 @@ input:focus {
   background-color: #1C8CAB;
 }
 
-.portfolio-link {
-  color: #61b9c5;
-  margin-top: 4rem;
-  font-size: 0.75rem;
-  font-style: italic;
-}
-
-.portfolio-link a {
-  color: #61b9c5;
-  font-weight: 700;
-}
-
 .message {
   font-size: 0.8rem;
 }
@@ -89,7 +84,7 @@ input:focus {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 8rem;
+    padding: 6rem 0;
   }
   .login-form {
     border-radius: 1rem;

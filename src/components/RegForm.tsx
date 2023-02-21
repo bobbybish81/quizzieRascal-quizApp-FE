@@ -59,7 +59,7 @@ const Register = () => {
             className='close-icon'
             onClick={() => navigate('/login')}/>
             <p className='text-white pt-5'>Register with</p>
-            <h1 className='text-white mb-5'>QUIZZIE RASCAL!</h1>
+            <h2 className='text-white mb-5'>QUIZZIE RASCAL</h2>
             <p className='text-white-50'>Please complete the form below</p>
             <div className='mx-auto px-5 mb-4'>
               <input

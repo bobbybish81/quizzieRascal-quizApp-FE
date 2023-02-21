@@ -1,0 +1,155 @@
+.landing-page {
+  height: 100vh;
+  width: 100vw;
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0.5rem;
+}
+
+.mobile-portfolio-link {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+.desktop-portfolio-link {
+  text-align: center;
+  display: none;
+}
+
+.mobile-portfolio-link a,
+.desktop-portfolio-link a {
+  text-align: center;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+}
+
+.navlinks {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navlinks a {
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar a:hover {
+  color: #88a7b8;
+}
+
+.landing-page-title {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Abril Fatface', cursive;
+}
+
+.landing-page-title h1 {
+  text-align: center;
+  font-weight: 900;
+  letter-spacing: 0.25rem;
+  font-size: 3rem;
+  text-shadow: 1px 1px #000;
+}
+
+.landing-page-title h4 {
+  text-align: center;
+  letter-spacing: 0.25rem;
+  color: #dea404;
+  text-shadow: 1px 1px #000;
+  margin: 1rem;
+}
+
+/* error page css styles */
+
+.error-section {
+  display: block;
+  height: 100vh;
+  min-width: 350px;
+  background-color: #1F5F82;
+  margin: 0;
+  border: 1px solid #fff;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-container article {
+  height: 40%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.error-container h1 {
+  width: 30rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.error-container p  {
+  margin: 0 auto;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.error-container p:hover {
+  color: #bbb9b9;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .mobile-portfolio-link {
+    display: none;
+  }
+
+  .desktop-portfolio-link {
+    display: block;
+    margin: 0 0 0 4rem;
+  }
+
+  .navlinks {
+    margin: 0;
+    width: fit-content;
+    justify-content: center;
+  }
+
+  .navlinks a {
+    margin-right: 4rem;
+  }
+
+  .landing-page-title {
+    height: 75%;
+  }
+
+  .landing-page-title h1 {
+    font-size: 5rem
+  }
+
+  .landing-page-title h4 {
+    font-size: 2rem;
+  }
+}

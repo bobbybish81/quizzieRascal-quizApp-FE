@@ -40,9 +40,19 @@
 
 .quiz-heading {
   display: none;
+  font-weight: 900;
+  letter-spacing: 0.25rem;
+  font-family: 'Abril Fatface', cursive;
+  text-shadow: 1px 1px #000;
+  margin: 0.5rem auto 1rem auto;
+  font-size: 2rem;
 }
 
 .heading {
+  font-weight: 900;
+  letter-spacing: 0.25rem;
+  font-family: 'Abril Fatface', cursive;
+  text-shadow: 1px 1px #000;
   margin: 0.5rem auto 1rem auto;
   font-size: 2rem;
 }
