@@ -57,7 +57,7 @@ const Register = () => {
             className='reg-form'>
           <CloseIcon
             className='close-icon'
-            onClick={() => navigate('/login')}/>
+            onClick={() => navigate('/')}/>
             <p className='text-white pt-5'>Register with</p>
             <h2 className='text-white mb-5'>QUIZZIE RASCAL</h2>
             <p className='text-white-50'>Please complete the form below</p>

@@ -1,6 +1,7 @@
 import IconButton from '@mui/material/IconButton';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import CloseIcon from '@mui/icons-material/Close';
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios, { AxiosError } from 'axios';
@@ -54,6 +55,9 @@ const LoginForm = () => {
         <form
           onSubmit={formik.handleSubmit}
           className='login-form'>
+          <CloseIcon
+            className='close-icon'
+            onClick={() => navigate('/')}/>
           <p className='text-white pt-5'>Welcome to</p>
           <h2 className='text-white mb-5'>QUIZZIE RASCAL</h2>
           <p className='text-white-50'>Please enter your email and password!</p>

@@ -14,11 +14,11 @@
   height: 100vh;
   background-color: #161A41;
   text-align: center;
+  position: relative;
 }
 
 .reg-form {
   background-color: #1F5F82;
-  position: relative;
 }
 
 .login-form h2 , .reg-form h2 {
@@ -30,8 +30,8 @@
 
 .close-icon {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 15px;
+  right: 15px;
   cursor: pointer;
   color: #c7c5c5;
 }
