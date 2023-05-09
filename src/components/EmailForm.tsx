@@ -39,9 +39,7 @@ const EmailForm = ({ user, setUser } : EmailProps) => {
         else if (err && err instanceof Error) setError(err.message)
     }
   }
-
-  console.log('user:', user)
-  console.log('email:', email)
+  
   return (
      <form
         onSubmit={(e)=> confirmUser(e)}
