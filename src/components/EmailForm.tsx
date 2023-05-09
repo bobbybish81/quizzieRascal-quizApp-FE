@@ -24,8 +24,7 @@ const EmailForm = ({ user, setUser } : EmailProps) => {
   const confirmUser = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     try {
-      // const response = await axios.post('https://quizzierascal.cyclic.app/resetpassword', {email: email});
-      const response = await axios.post('http://localhost:8080/resetpassword', {email: email});
+      const response = await axios.post('https://quizzierascal.cyclic.app/resetpassword', {email: email});
       setUser({
         ...user,
         username: response.data.username,
