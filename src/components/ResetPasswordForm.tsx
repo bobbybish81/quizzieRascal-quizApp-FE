@@ -17,7 +17,7 @@ const ResetPasswordForm = () => {
     success: false,
     username: null,
     email: '',
-    message: ''
+    message: null
   });
 
   const [newPassword, setNewPassword] = useState<string>('');
