@@ -15,6 +15,7 @@ const EmailForm = ({ user, setUser } : EmailProps) => {
   const navigate = useNavigate();
 
   const [email, setEmail] = useState<string>('');
+  const [searching, setSearching] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -23,6 +24,7 @@ const EmailForm = ({ user, setUser } : EmailProps) => {
 
   const confirmUser = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    setSearching(true)
     try {
       const response = await axios.post('https://quizzierascal.cyclic.app/resetpassword', {email: email});
       setUser({
@@ -30,7 +32,7 @@ const EmailForm = ({ user, setUser } : EmailProps) => {
         username: response.data.username,
         email: response.data.email,
         message: response.data.message
-      })
+      });
     }
     catch (err) {
       if (err && err instanceof AxiosError)
@@ -59,11 +61,18 @@ const EmailForm = ({ user, setUser } : EmailProps) => {
             onChange={(e) => handleChange(e)}
             required/>
         </div>
-        <button
+        {searching ? 
+        <div>
+          <div className='searching spinner-border' role='status'>
+            <span className='sr-only'></span>
+          </div>
+          <p className='text-white mt-2'>Searching</p>
+        </div>:
+        <button 
             className='confirm-btn'
             type='submit'>
             Confirm Email
-          </button>
+        </button>}
         {error ? <p className='error-message m-0'>{`${error} `}
           <Link
             to='/register'
