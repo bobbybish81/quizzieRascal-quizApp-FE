@@ -10,7 +10,7 @@
   display: none;
 }
 
-.login-form, .reg-form {
+.login-form, .reg-form, .reset-form {
   height: 100vh;
   background-color: #161A41;
   text-align: center;
@@ -21,7 +21,9 @@
   background-color: #1F5F82;
 }
 
-.login-form h2 , .reg-form h2 {
+.login-form h2,
+.reg-form h2,
+.reset-form h2 {
   font-weight: 900;
   letter-spacing: 0.25rem;
   font-family: 'Abril Fatface', cursive;
@@ -50,7 +52,10 @@ input:focus {
   color: #fff
 }
 
-.login-btn, .reg-btn {
+.login-btn,
+.reg-btn,
+.confirm-btn,
+.reset-btn {
   margin: 1.5rem;
   padding: 0.25rem 1rem;
   border: 2px solid #fff;
@@ -64,7 +69,7 @@ input:focus {
   background-color: #1F5F82;
 }
 
-.login-btn:hover {
+.login-btn:hover, .confirm-btn:hover, .reset-btn:hover {
   background-color: #283078;
 }
 
@@ -90,6 +95,12 @@ input:focus {
     border-radius: 1rem;
     width: 400px;
     height: 600px;
+    border: 4px solid #fff;
+  }
+  .reset-form {
+    border-radius: 1rem;
+    width: 400px;
+    height: 525px;
     border: 4px solid #fff;
   }
   .reg-form {
