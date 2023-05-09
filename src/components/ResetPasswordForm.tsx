@@ -9,7 +9,7 @@ import EmailForm from './EmailForm';
 import axios, { AxiosError } from 'axios';
 import '../styles/Forms.css';
 
-const ResetPassword = () => {
+const ResetPasswordForm = () => {
 
   const navigate = useNavigate();
 
@@ -37,8 +37,7 @@ const ResetPassword = () => {
   const resetPassword = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     try {
-      // const response = await axios.patch('https://quizzierascal.cyclic.app/register', values);
-      const response = await axios.patch('http://localhost:8080/resetpassword', {
+      const response = await axios.patch('https://quizzierascal.cyclic.app/resetpassword', {
         username: user.username,
         email: user.email,
         password: newPassword
@@ -106,4 +105,4 @@ const ResetPassword = () => {
   );
 }
 
-export default ResetPassword;
+export default ResetPasswordForm;

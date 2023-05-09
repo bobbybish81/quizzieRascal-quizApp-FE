@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import LandingPage from "./routes/LandingPage";
 import Error from "./routes/Error";
 import Login from './routes/Login';
-import ResetPassword from './routes/ResetPassword';
+import ResetPassword from './routes/PasswordReset';
 import Register from './routes/Register';
 import Home from './routes/Home';
 import Quiz from './routes/Quiz';
