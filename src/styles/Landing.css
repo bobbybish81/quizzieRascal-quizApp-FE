@@ -89,7 +89,7 @@
   align-items: center;
 }
 
-.error-container article {
+.error-section article {
   height: 40%;
   margin: 0 auto;
   display: flex;
@@ -98,19 +98,19 @@
   align-items: center;
 }
 
-.error-container h1 {
+.error-section h1 {
   width: 30rem;
   text-align: center;
   margin: 0 auto;
 }
 
-.error-container p  {
+.error-section p  {
   margin: 0 auto;
   text-decoration: underline;
   text-align: center;
 }
 
-.error-container p:hover {
+.error-section p:hover {
   color: #bbb9b9;
 }
 

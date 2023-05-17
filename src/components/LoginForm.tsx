@@ -2,7 +2,7 @@ import IconButton from '@mui/material/IconButton';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import CloseIcon from '@mui/icons-material/Close';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios, { AxiosError } from 'axios';
 import { useSignIn } from 'react-auth-kit';
@@ -12,6 +12,8 @@ import '../styles/Forms.css';
 const LoginForm = () => {
 
   const navigate = useNavigate();
+
+  const [loading, setLoading] = useState<boolean>(false);
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState<string>('');
   const signIn: (obj:any) => boolean = useSignIn();
@@ -23,22 +25,26 @@ const LoginForm = () => {
   };
 
   const onSubmit = async (values:any) => {
+    setLoading(true)
     try {
       const response = await axios.post('https://quizzierascal.cyclic.app/login', values);
       signIn({
-        token: response?.data.token,
-        expiresIn: 86400,
+        token: response?.data.accessToken,
+        expiresIn: 1800000,
         tokenType: 'Bearer',
         authState: { email: values.email},
       })
       if (!localStorage.getItem('USER_ID')) {
-        localStorage.setItem('USER_ID', response?.data.user)
+        localStorage.setItem('USER_ID', response?.data.userId)
       }
+      setLoading(false);
       navigate('/home')
     }
     catch (err) {
-      if (err && err instanceof AxiosError)
+      if (err && err instanceof AxiosError) {
         setError(err.response?.data.message);
+        setLoading(false);
+      }
         else if (err && err instanceof Error) setError(err.message)
     }
   }
@@ -50,6 +56,10 @@ const LoginForm = () => {
   },
     onSubmit,
   });
+
+  useEffect(() => {
+
+  })
 
   return (
       <form
@@ -92,13 +102,17 @@ const LoginForm = () => {
           </div>
         </div>
         <p className='error-message m-0'>{error}</p>
-        <button
+        {loading ? 
+        <div className='loading spinner-border mb-4' role='status'>
+          <span className='sr-only'></span>
+        </div> :
+        <button 
           className='login-btn'
           type='submit'>
           Login
-        </button>
+        </button>}
         <p className='text-white-50 mt-3'>Forgot your password? <Link
-          to='/resetpassword'
+          to='/verifyemail'
           className='text-white bolder'>Reset Password
           </Link>
         </p>

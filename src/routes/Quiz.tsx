@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
-import IState from '../interfaces/IState';
+import { useAuthHeader } from 'react-auth-kit';
 import { useNavigate } from 'react-router-dom';
+import IState from '../interfaces/IState';
 import Question from '../components/Question';
 import axios from 'axios';
 import '../styles/Home.css';
@@ -9,6 +10,7 @@ import '../styles/Home.css';
 const Quiz = () => {
 
   const navigate = useNavigate();
+  const authHeader = useAuthHeader();
 
   const [quizData, setQuizData] = useState<IState>({
     id: localStorage.getItem('USER_ID'),
@@ -56,7 +58,13 @@ const Quiz = () => {
         score: quizData.score,
         timeTaken: timeTaken,
       }
-    axios.post(`https://quizzierascal.cyclic.app/api/leaderboard/${quizData.id}`, result);
+      const token = authHeader();
+      const headers = {
+        Authorization: token,
+      }
+      axios.post(`https://quizzierascal.cyclic.app/leaderboard/${quizData.id}`, result, {
+        headers: headers,
+      });
     }
   }
 

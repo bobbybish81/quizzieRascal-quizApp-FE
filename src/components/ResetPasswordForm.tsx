@@ -4,8 +4,6 @@ import IconButton from '@mui/material/IconButton';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import CloseIcon from '@mui/icons-material/Close';
-import IUser from '../interfaces/IUser';
-import EmailForm from './EmailForm';
 import axios, { AxiosError } from 'axios';
 import '../styles/Forms.css';
 
@@ -13,16 +11,10 @@ const ResetPasswordForm = () => {
 
   const navigate = useNavigate();
 
-  const [user, setUser] = useState<IUser>({
-    success: false,
-    username: null,
-    email: '',
-    message: null
-  });
-
   const [newPassword, setNewPassword] = useState<string>('');
   const [showPassword, setShowPassword] = useState<boolean>(false);
-  const [error, setError] = useState<string>('');
+  const [error, setError] = useState<string | null>(null);
+  const [successful, setSuccessful] = useState<boolean>(false);
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
@@ -34,15 +26,18 @@ const ResetPasswordForm = () => {
     setNewPassword(event.target.value)
   }
 
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const token = urlParams.get('token');
+
   const resetPassword = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     try {
-      const response = await axios.patch('https://quizzierascal.cyclic.app/resetpassword', {
-        username: user.username,
-        email: user.email,
+      await axios.patch('https://quizzierascal.cyclic.app/resetpassword', {
+        token: token,
         password: newPassword
       });
-      setUser(response.data)
+      setSuccessful(true);
       setTimeout(() => navigate('/login'), 5000);
     }
     catch (err) {
@@ -54,16 +49,16 @@ const ResetPasswordForm = () => {
 
   return (
     <>
-    {!user.username ? <EmailForm user={user} setUser={setUser}/> : !user.success ?
+    {!successful ?
     <form
       onSubmit={(e)=> resetPassword(e)}
       className='reset-form'>
       <CloseIcon
         className='close-icon'
         onClick={() => navigate('/')}/>
-        <p className='text-white pt-5'>Welcome back</p>
-        <h2 className='text-white mb-5'>{`${user.username}`}</h2>
-        <p className='text-white-50'>Please enter your new password</p>
+        <h2 className='text-white pt-5 mb-3'>QUIZZIE RASCAL</h2>
+        <h6 className='text-white mb-5'>ADD NEW PASSWORD</h6>
+        <p className='text-white-50'>Please enter your new password below</p>
       <div className='mx-auto px-5 mb-4'>
         <div className='password-div w-100 d-flex p-0 bg-white'>
         <input

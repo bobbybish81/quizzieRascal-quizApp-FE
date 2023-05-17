@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import LandingPage from "./routes/LandingPage";
 import Error from "./routes/Error";
 import Login from './routes/Login';
+import VerifyEmail from './routes/VerifyEmail';
 import ResetPassword from './routes/PasswordReset';
 import Register from './routes/Register';
 import Home from './routes/Home';
@@ -14,7 +15,8 @@ const App = () => {
     <Routes>
       <Route path="/" element={<LandingPage/>}/>
         <Route path={'/login'} element={<Login/>}/>
-        <Route path={'/resetpassword'} element={<ResetPassword/>}/>
+        <Route path={'/verifyemail'} element={<VerifyEmail/>}/>
+        <Route path={'/resetpassword/*'} element={<ResetPassword/>}/>
         <Route path={'/register'} element={<Register/>}/>
         <Route path={'/*'} element={<Error/>}/>
         <Route path={'/home'} element={

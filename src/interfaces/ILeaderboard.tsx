@@ -1,5 +1,5 @@
 export interface IUserData {
-  id: string,
+  userId: string,
   username: string,
   totalPlays: number,
   totalScore: number,
