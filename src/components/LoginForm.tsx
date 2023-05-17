@@ -111,12 +111,12 @@ const LoginForm = () => {
           type='submit'>
           Login
         </button>}
-        <p className='text-white-50 mt-3'>Forgot your password? <Link
+        <p className='text-white-50 mt-4'>Forgot your password? <Link
           to='/verifyemail'
           className='text-white bolder'>Reset Password
           </Link>
         </p>
-        <p className='text-white-50 mt-3'>Don't have an account? <Link
+        <p className='text-white-50 mt-4'>Don't have an account? <Link
             to='/register'
             className='text-white bolder'>Register here
           </Link>
