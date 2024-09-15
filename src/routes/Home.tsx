@@ -26,7 +26,7 @@ const Home = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('https://quizzierascal.cyclic.app/api/leaderboard', { headers: headers });
+      const response = await axios.get('https://quizzie-rascal-be-322fdaeb9a86.herokuapp.com/api/leaderboard', { headers: headers });
       setLeaderboard({
         ...leaderboard,
         loading: false,
@@ -55,7 +55,7 @@ const Home = () => {
     const headers = {
       Authorization: token,
     }
-    await axios.delete(`https://quizzierascal.cyclic.app/logout/${localStorage.getItem('USER_ID')}`, {
+    await axios.delete(`https://quizzie-rascal-be-322fdaeb9a86.herokuapp.com/logout/${localStorage.getItem('USER_ID')}`, {
       headers: headers,
     });
     localStorage.removeItem('USER_ID');

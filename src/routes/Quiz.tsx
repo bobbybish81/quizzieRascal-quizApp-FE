@@ -62,7 +62,7 @@ const Quiz = () => {
       const headers = {
         Authorization: token,
       }
-      axios.post(`https://quizzierascal.cyclic.app/leaderboard/${quizData.id}`, result, {
+      axios.post(`https://quizzie-rascal-be-322fdaeb9a86.herokuapp.com/leaderboard/${quizData.id}`, result, {
         headers: headers,
       });
     }

@@ -33,7 +33,7 @@ const ResetPasswordForm = () => {
   const resetPassword = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     try {
-      await axios.patch('https://quizzierascal.cyclic.app/resetpassword', {
+      await axios.patch('https://quizzie-rascal-be-322fdaeb9a86.herokuapp.com/resetpassword', {
         token: token,
         password: newPassword
       });

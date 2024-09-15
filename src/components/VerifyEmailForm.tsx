@@ -21,7 +21,7 @@ const VerifyEmailForm = () => {
     event.preventDefault();
     setVerifying(true)
     try {
-      await axios.post('https://quizzierascal.cyclic.app/verifyemail', {email: email});
+      await axios.post('https://quizzie-rascal-be-322fdaeb9a86.herokuapp.com/verifyemail', {email: email});
       setVerifying(false);
       setSuccessful(true);
       setTimeout(() => navigate('/'), 5000);

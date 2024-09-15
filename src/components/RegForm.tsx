@@ -29,7 +29,7 @@ const Register = () => {
 
   const onSubmit = async (values:any) => {
     try {
-      const response = await axios.post('https://quizzierascal.cyclic.app/register', values);
+      const response = await axios.post('https://quizzie-rascal-be-322fdaeb9a86.herokuapp.com/register', values);
       setRegistration(response.data)
       setTimeout(() => navigate('/login'), 5000);
     }
