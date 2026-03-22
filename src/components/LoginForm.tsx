@@ -27,7 +27,7 @@ const LoginForm = () => {
   const onSubmit = async (values:any) => {
     setLoading(true)
     try {
-      const response = await axios.post('https://quizzie-rascal-be-322fdaeb9a86.herokuapp.com/login', values);
+      const response = await axios.post('https://quizzierascal-quizapp-be.onrender.com/login', values);
       signIn({
         token: response?.data.accessToken,
         expiresIn: 1800000,
